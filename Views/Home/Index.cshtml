@@ -1,0 +1,201 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<style>
+  
+.box-shadow  {
+  box-shadow: rgb(127, 127, 127);
+}
+
+
+.forrmmm {
+
+      margin-left: 255px;
+}
+</style>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12">
+
+
+
+    <h1>Iniciativa Saúde da Cidade</h1>
+    <p>
+        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+    <p>
+        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+</div>
+
+<div class="col-md-6 col-sm-12 box-shadow">
+
+
+<img class="img-fluid" src="~/img/foto1.jpg"/>
+</div>
+
+  </div>
+</div>
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-lg-5 col-sm-12 box-shadow contact-form" style="margin: auto;">
+
+      <h2>Entre em contato!:</h2>
+      <p>Nos mande uma mensagem e fique por dentro de <br> nossos eventos</p>
+      <form action="/Home/Cadastrar" method="POST">
+        <div>
+          <label asp-for="Nome" class="col-3">Nome:</label>
+          <input asp-for="Nome" />
+        </div>
+        <p></p>
+        <div>
+          <label asp-for="Email" class="col-3">Email:</label>
+          <input asp-for="Email" />
+        </div>
+        <p></p>
+        <div>
+          <label asp-for="Mensagem" class="col-3">Mensagem <br>(opcional):</label>
+          <textarea asp-for="Mensagem"></textarea>
+        </div>
+        <div  >
+          <input type="submit" value="Enviar" class="forrmmm"/>
+       </div>
+      </form>
+    </div>
+    <div class="col-1"></div>
+    
+    <!--Botoes-->
+   <div class="col-md-6 col-lg-6 col-sm-12">
+   <P style="height: 2em;"></P>
+  <a class="btn btn-primary" href="#" type="button" data-toggle="modal" data-target="#agenda-modal" style="padding: 50px 10px;">Agenda de eventos</a>
+  <div class="modal fade" id="agenda-modal" tabindex="-1" role="dialog" aria-labelledby="agenda-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agenda-modal-label">Agenda de Eventos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <p>
+  <strong>Evento 1</strong><br>
+  <em>10/10/10 10:10</em><br>
+  Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+</p>
+<p>
+  <strong>Evento 2</strong><br>
+  <em>10/10/10 10:10</em><br>
+  Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+</p>
+<p>
+  <strong>Evento 3</strong><br>
+  <em>10/10/10 10:10</em><br>
+  Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="btn btn-primary" href="#" type="button" data-toggle="modal" data-target="#dicas-modal" style="padding: 50px 10px; font-size: 16px;">Dicas de vida saudável</a>
+  <div class="modal fade" id="dicas-modal" tabindex="-1" role="dialog" aria-labelledby="dicas-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dicas-modal-label">Dicas de vida saudável</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><b>1- </b>Tenha uma alimentação equilibrada, rica em nutrientes como frutas, verduras, legumes, proteínas magras e carboidratos integrais;</p>
+          <p><b>2- </b>Mantenha-se hidratado, bebendo bastante água ao longo do dia;</p>
+          <p><b>3- </b>Pratique atividades físicas regularmente, escolhendo uma modalidade que você goste e se sinta motivado a praticar;</p>
+          <p><b>4- </b>Realize exames médicos de rotina para monitorar a saúde e detectar possíveis doenças precocemente.</p>
+          <p><b>5- </b>Busque equilíbrio emocional, mantendo uma rotina equilibrada, realizando atividades que goste e buscando ajuda profissional caso necessário;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="btn btn-primary" href="#" type="button" data-toggle="modal" data-target="#apoiadores-modal" style="padding: 50px 10px;">Apoiadores</a>
+  <div class="modal fade" id="apoiadores-modal" tabindex="-1" role="dialog" aria-labelledby="apoiadores-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="apoiadores-modal-label">Apoiadores</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+   <div class="modal-body">
+        <div class="row">
+          <div class="col-4" style="margin-bottom: 10px;">
+            <img src="~/img/apoiado1.jpg" alt="Apoiador 1 Thumbnail" width="100px">
+          </div> 
+          <h3 class="col-5">Empresa 1</h3>
+          <center>
+          <small>Lorem ipsum dolor sit amet et delectus accommodare his consul </small>
+          </center>
+
+          <div class="col-4" style="margin-bottom: 20px;">
+            <img src="~/img/apoiado2.jpg" alt="Apoiador 2 Thumbnail" width="100px">
+          </div>
+          <h3 class="col-5">Empresa 2</h3>
+           <center>
+          <small>Lorem ipsum dolor sit amet et delectus accommodare his consul </small>
+          </center>
+          <div class="col-4" style="margin-bottom: 20px;">
+            <img src="~/img/apoiado3.jpg" alt="Apoiador 3 Thumbnail" width="100px">
+          </div>
+          <h3 class="col-5">Empresa 3</h3>
+          <center>
+          <small>Lorem ipsum dolor sit amet et delectus accommodare his consul </small>
+          </center>
+
+          <div class="col-4" style="margin-bottom: 20px;">
+            <img src="~/img/apoiado4.jpg" alt="Apoiador 3 Thumbnail" width="100px">
+          </div>
+          <h3 class="col-5">Empresa 4</h3>
+          <center>
+          <small>Lorem ipsum dolor sit amet et delectus accommodare his consul </small>
+          </center>
+          <p></p>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+</div>
+@if (ViewBag.SuccessMessage != null)
+{
+    <script>
+        alert("@ViewBag.SuccessMessage");
+    </script>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <script>
+        alert("@ViewBag.ErrorMessage");
+    </script>
+}
